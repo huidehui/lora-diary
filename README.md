@@ -30,7 +30,7 @@ pip install -r requirement.txt
 ps：如果想让图片画出来的更好看，可以先美颜！
 
 数据集（经过裁剪后的512*512）
-![]()
+![](readme.jpg/微信图片_20241217212104.png)
 
 
 ##打标
@@ -171,15 +171,25 @@ nsfw, paintings, cartoon, anime, sketches, worst quality, low quality, normal qu
 ### 4. 正则化
 降低过拟合都，提高泛化性
 
+### 5. x/y/z轴测试模型
+
 一：1.正则化的图片，固定一些信息；2.将偏离的lora给扳回来，也就是起到了限制lora肆意发展的能力
 
 引导lora生成的预训练素材相似的图片
 
 #### 目标：生成蓝色头发的我
 步长：28
+
 cfg：7
-![]()
-![]()
+
+出图时间：20s
+
+3050
+
+使用微调模型
+
+![](readme.jpg/屏幕截图 2025-03-13 202556.png)
+![](readme.jpg/屏幕截图 2025-03-13 202620.png)
 
   
 
