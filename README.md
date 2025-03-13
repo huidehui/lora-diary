@@ -30,7 +30,7 @@ pip install -r requirement.txt
 ps：如果想让图片画出来的更好看，可以先美颜！
 
 数据集（经过裁剪后的512*512）
-![](readme.jpg/微信图片_20241217212104.png)
+![](readme.jpg/20241217212104.png)
 
 
 ##打标
@@ -188,8 +188,9 @@ cfg：7
 
 使用微调模型
 
-![](readme.jpg/屏幕截图 2025-03-13 202556.png)
-![](readme.jpg/屏幕截图 2025-03-13 202620.png)
+![](https://github.com/huidehui/lora-diary/blob/79847d3e925a5fde765c928d4c91a40f4bc3c6b6/readme.jpg/%20202620.png)
+
+![](https://github.com/huidehui/lora-diary/blob/79847d3e925a5fde765c928d4c91a40f4bc3c6b6/readme.jpg/%20202620.png)
 
   
 
