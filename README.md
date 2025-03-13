@@ -22,16 +22,15 @@ pip install -r requirement.txt
 
 ## 数据收集
 供参考：
+
 ![](readme.jpg/1734153952530.jpg)
 
 
-
-
-
-图片裁剪：brime BIRME - 批量图像大小调整变得简单2.0（在线&免费）
-ps：美化照片的方法？？？
+* 图片裁剪：[Brime](https://www.birme.net/)
+ps：如果想让图片画出来的更好看，可以先美颜！
 
 数据集（经过裁剪后的512*512）
+![]()
 
 
 ##打标
@@ -139,6 +138,49 @@ python clean_captions_and_tags.py meta_cap_dd.json meta_clean.json
 ```
 
 ps：去掉一些符号，例如：‘-’
+
+
+## 实验
+### 1. 如何使用提示词
+
+直接对提示词赋予权重：（提示词：权重）
+
+(1girl:0.75)  权重为0.75
+
+（1girl）权重乘以1.1
+
+ {} 花括号：增加权重0.05
+ 
+[]方括号:权重除以1.1
+
+### 2. 连接符
+and：将多个词缀聚合在一个提示词顺序位置中，其初始权重一致
+bird and dog and pig 3个权重是一致的
+#### 分布渲染
+```
+// 渲染蓝色到40%进度后，开始渲染红色
+[blue:red:0.4]
+
+// 前12步渲染蓝色后，开始渲染红色
+[blue:red:12]
+```
+
+### 3.反向提示词
+nsfw, paintings, cartoon, anime, sketches, worst quality, low quality, normal quality, lowres, watermark, monochrome, grayscale, ugly, blurry, Tan skin, dark skin, black skin, skin spots, skin blemishes, age spot, glans, disabled, distorted, bad anatomy, morbid, malformation, amputation, bad proportions, twins, missing body, fused body, extra head, poorly drawn face, bad eyes, deformed eye, unclear eyes, cross-eyed, long neck, malformed limbs, extra limbs, extra arms, missing arms, bad tongue, strange fingers, mutated hands, missing hands, poorly drawn hands, extra hands, fused hands, connected hand, bad hands, wrong fingers, missing fingers, extra fingers, 4 fingers, 3 fingers, deformed hands, extra legs, bad legs, many legs, more than two legs, bad feet, wrong feet, extra feets,
+
+### 4. 正则化
+降低过拟合都，提高泛化性
+
+一：1.正则化的图片，固定一些信息；2.将偏离的lora给扳回来，也就是起到了限制lora肆意发展的能力
+
+引导lora生成的预训练素材相似的图片
+
+#### 目标：生成蓝色头发的我
+步长：28
+cfg：7
+![]()
+![]()
+
   
 
 
